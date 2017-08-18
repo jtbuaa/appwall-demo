@@ -13,6 +13,8 @@ import com.mobvista.msdk.out.MobVistaSDKFactory;
 
 import java.util.Map;
 
+import static com.example.jt.demo.R.color.colorPrimary;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,8 +39,18 @@ public class MainActivity extends AppCompatActivity {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(MobVistaConstans.PROPERTIES_UNIT_ID, "10000");
 
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_STATUS_COLOR, colorPrimary);
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_TITLE_BACKGROUND_COLOR, colorPrimary);
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_TAB_BACKGROUND_ID, colorPrimary);
+
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_TAB_INDICATE_LINE_BACKGROUND_ID,
+                    android.R.color.white);
+
+            String white = "#ffffff";
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_TAB_UNSELECTED_TEXT_COLOR, white);
+            intent.putExtra(MobVistaConstans.PROPERTIES_WALL_TAB_SELECTED_TEXT_COLOR, white);
             getApplicationContext().startActivity(intent);
-        } catch (Exception e) {
+        } catch (ClassNotFoundException e) {
             Log.e("=========", "", e);
         }
     }
