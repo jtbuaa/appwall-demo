@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     .forName("com.mobvista.msdk.shell.MVActivity");
             Intent intent = new Intent(getApplicationContext(), aClass);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra(MobVistaConstans.PROPERTIES_UNIT_ID, "16979");
+            intent.putExtra(MobVistaConstans.PROPERTIES_UNIT_ID, "10000");
 
             getApplicationContext().startActivity(intent);
         } catch (Exception e) {
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static final String MOBVISTA_APP_ID = "91101";
-    public static final String MOBVISTA_API_KEY = "854b51965267f6e0056983c441a95948";
+    public static final String MOBVISTA_APP_ID = "90000";
+    public static final String MOBVISTA_API_KEY = "88888888888888888888888888888888";
     private void initMobvistaSdk() {
         final MobVistaSDK sdk = MobVistaSDKFactory.getMobVistaSDK();
         final Map<String, String> map = sdk.getMVConfigurationMap(
